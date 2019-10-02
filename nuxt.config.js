@@ -17,10 +17,22 @@ module.exports = {
   ** Customize the progress bar color
   */
   loading: { color: '#3B8070' },
+  /**
+   ** Global CSS
+   */
+
+   css: [
+     './assets/styles/app.scss'
+   ],
   /*
   ** Build configuration
   */
   build: {
+    postcss: {
+      plugins: {
+        tailwindcss: './tailwind.config.js'
+      }
+    },
     /*
     ** Run ESLint on save
     */
